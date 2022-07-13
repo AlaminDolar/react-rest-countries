@@ -21,10 +21,20 @@ function Countries() {
     <div>
       <h2>Travelling In Morjwad</h2>
       <h3>Countries: {countries.length}</h3>
+
+      {
+        countries.map(country => <Country name={country.name.common}></Country>)
+      }
+
+    </div>)
+}
+
+
+function Country(props) {
+  return (
+    <div>
+      <h2>Nmae : {props.name}</h2>
     </div>
-
-
-
   )
 }
 
